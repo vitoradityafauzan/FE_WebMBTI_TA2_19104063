@@ -1,0 +1,6 @@
+/** Authentication Actions  */
+export const LOGIN = 'LOGIN'
+export const LOGOUT = 'LOGOUT'
+export const AUTH_ERROR = 'AUTH_ERROR'
+export const isREGISTER = 'isREGISTER'
+export const isGOOGLELOGIN = 'isGOOGLELOGIN'
