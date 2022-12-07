@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** Font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+/** For Navbar  */
+
+
+/** For Page Login and Register User  */
+/* #passInput {
+  width: 75%;
+}
+
+#emailInput {
+  width: 85%;
+} */
+
+/** For Regular User Page Dahsboard  */
+#mainTitle {
+  /* border: 1px solid black; */
+  font-size: 2rem;
+}
+
+div#mainTitle img {
+  margin-top: auto;
+  margin-bottom: auto;
+  /* border: 1px solid black; */
+}
+
+div#mainTitle p {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+
+/* For Admin Login Page */
+#wrapper-admin-login {
+  height: 100%;
+  width: 100%;
+  /* background-image: url("../../images/deusEx-city.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; */
+}

@@ -14,6 +14,7 @@ export const loginViaForm = (data) => async (dispatch) => {
     });
 
     const result = await response.json();
+
     if (result.token) {
       Swal.fire({
         position: "center",
@@ -22,6 +23,7 @@ export const loginViaForm = (data) => async (dispatch) => {
         showConfirmButton: false,
         timer: 1000,
       });
+      
       dispatch({
         type: LOGIN,
         payload: result.token,

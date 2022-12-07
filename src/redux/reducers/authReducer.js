@@ -1,4 +1,5 @@
 import {
+  /* Auth states */
     AUTH_ERROR,
     isGOOGLELOGIN,
     LOGIN,
@@ -10,7 +11,7 @@ import {
     isRegister: false,
     isAuthenticated: !!localStorage.getItem('token'),
     token: localStorage.getItem('token'),
-    error: null,
+    errorAuth: null,
   }
   
   const authReducer = (state = initialState, action) => {
@@ -20,7 +21,7 @@ import {
           ...state,
           isRegister: true,
           token: null,
-          error: null,
+          errorAuth: null,
         }
       case isGOOGLELOGIN:
         localStorage.setItem('token', action.payload)
@@ -29,7 +30,7 @@ import {
           isRegister: true,
           isAuthenticated: true,
           token: action.payload,
-          error: null,
+          errorAuth: null,
         }
       case LOGIN:
         localStorage.setItem('token', action.payload)
@@ -38,7 +39,7 @@ import {
           isRegister: true,
           isAuthenticated: true,
           token: action.payload,
-          error: null,
+          errorAuth: null,
         }
       case LOGOUT:
         localStorage.removeItem('token')
@@ -47,7 +48,7 @@ import {
           isAuthenticated: false,
           isRegister: false,
           token: null,
-          error: null,
+          errorAuth: null,
         }
       case AUTH_ERROR:
         localStorage.removeItem('token')
@@ -55,7 +56,7 @@ import {
           ...state,
           isAuthenticated: false,
           token: null,
-          error: action.payload,
+          errorAuth: action.payload,
         }
       default:
         return state

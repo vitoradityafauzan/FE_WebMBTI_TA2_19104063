@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginViaForm } from "../redux/actions/authActions";
-import "../index.css";
 import LogImg from "../images/pexels-christina-morillo.jpg";
-import { Input } from "antd";
-// import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
+import "../public/css/style.css";
+
+/* import { Input } from "antd";
+import 'antd/dist/antd.css';
+import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons"; */
 import { Link, Navigate } from "react-router-dom";
 
 const LoginUser = () => {
   // const [passwordVisible, setPasswordVisible] = React.useState(false);
   const dispatch = useDispatch();
-  const { isAuthenticated, error } = useSelector((state) => state.auth);
+  const { isAuthenticated, errorAuth } = useSelector((state) => state.auth);
 
   useEffect(() => {
-    if (error) {
-      alert(error);
+    if (errorAuth) {
+      alert(errorAuth);
     }
-  }, [error]);
+  }, [errorAuth]);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,34 +45,40 @@ const LoginUser = () => {
               <img src={LogImg} className="w-full h-full m-0" alt="Not FOund" />
             </div>
             <div className="basis-2/4 h-full w-full p-2 md:grid">
-              <div className="rounded-lg p-1 my-auto lg:mx-16">
+              <div className="rounded-lg p-1 my-auto border-2 border-red-700 lg:mx-16">
                 <h4 className="text-2xl font-bold mb-4 pt-6">Masuk</h4>
                 <form onSubmit={handleSubmit}>
-                  <p className="mb-3 text-sm">Email</p>
-                  <div className="mb-5 p-1">
-                    <Input
-                      type="email"
-                      className="border border-zinc-500/50 rounded-[16px] p-2 w-full"
+                  <div className="w-full md:w-4/5">
+                    <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      Email
+                    </label>
+                    <input
+                      type="text"
                       id="emailInput"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Masukan Alamat Email"
-                      value={email} 
-                      onChange={(e) => setEmail(e.target.value)} 
                       required
                     />
                   </div>
                   <br />
-                  <p className="mb-3 text-sm">Password</p>
-                  <div className="mb-5 p-1">
-                    <Input.Password 
-                      type="password" 
-                      placeholder="Masukan password" id="passInput" 
-                      className="border border-zinc-500/50 rounded-[16px] px-4 py-2 m-0"
+                  <div class="mb-6 w-full md:w-4/5">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      id="passInput"
                       value={password}
-                      onChange={(e) => setPassword(e.target.value)} 
-                      required />
+                      onChange={(e) => setPassword(e.target.value)}
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Masukan password"
+                      required
+                    />
                   </div>
                   <br />
-                  <div className="text-center pt-2 mb-6">
+                  <div className="text-center pt-2 mb-6 mx-auto md:w-1/2">
                     <button
                       className="inline-block  hover:bg-[#8f48cf] bg-[#7126B5] px-6 py-3 text-white font-medium text-sm leading-tight rounded-[16px] shadow-md focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
                       type="submit"
