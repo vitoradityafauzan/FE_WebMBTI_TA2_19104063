@@ -14,6 +14,9 @@ export const loginViaForm = (data) => async (dispatch) => {
       });
   
       const result = await response.json();
+
+      console.log('REACT, login admin, ', result);
+
       if (result.token) {
         Swal.fire({
           position: "center",
@@ -26,6 +29,7 @@ export const loginViaForm = (data) => async (dispatch) => {
           type: ADMIN_LOGIN,
           payload: result.token,
         });
+
       } else if (result.message == "Email not found") {
         Swal.fire({
           position: "center",
@@ -35,6 +39,7 @@ export const loginViaForm = (data) => async (dispatch) => {
           timer: 1000,
         });
         authError(result.error);
+
       } else if (result.message == "Password incorrect") {
         Swal.fire({
           position: "center",
@@ -44,6 +49,7 @@ export const loginViaForm = (data) => async (dispatch) => {
           timer: 1000,
         });
         authError(result.error);
+
       } else {
         Swal.fire({
           position: "center",
@@ -54,6 +60,7 @@ export const loginViaForm = (data) => async (dispatch) => {
         });
         authError(result.error);
       }
+
     } catch (error) {
       authError(error);
     }

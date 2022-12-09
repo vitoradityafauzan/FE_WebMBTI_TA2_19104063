@@ -48,7 +48,7 @@ div#mainTitle p {
 }
 
 
-/* For Admin Login Page */
+/** For Admin Login Page */
 #wrapper-admin-login {
   height: 100%;
   width: 100%;
@@ -56,4 +56,32 @@ div#mainTitle p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; */
+}
+
+/** For Admin Dashboard Page */
+#admin-dash-left-responsive {
+  display: block;
+  position: absolute;
+}
+
+/** sm size */
+@media screen and (max-width: 640px) {
+  #sidebar-responsive-button {
+    display: block;
+  }
+  
+  #admin-dash-left {
+    display: none;
+  }
+}
+
+/** md size */
+@media screen and (min-width: 768px) {
+  #sidebar-responsive-button {
+    display: none;
+  }
+
+  #admin-dash-left {
+    display: block;
+  }
 }

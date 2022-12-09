@@ -50,7 +50,7 @@ const LoginAdmin = () => {
             <h1 className="mb-5 font-bold text-lg">Enter Account Credentials</h1>
             <form onSubmit={handleSubmit}>
               <div className="w-full md:w-4/5">
-                <label for="first_name" class="block mb-2 text-sm font-medium dark:text-white">
+                <label htmlFor="first_name" className="block mb-2 text-sm font-medium dark:text-white">
                   Email
                 </label>
                 <input
@@ -58,14 +58,14 @@ const LoginAdmin = () => {
                   id="emailInput"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter Email Address"
                   required
                 />
               </div>
               <br />
-              <div class="mb-6 w-full md:w-4/5">
-                <label for="password" class="block mb-2 text-sm font-medium dark:text-white">
+              <div className="mb-6 w-full md:w-4/5">
+                <label htmlFor="password" className="block mb-2 text-sm font-medium dark:text-white">
                   Password
                 </label>
                 <input
@@ -73,7 +73,7 @@ const LoginAdmin = () => {
                   id="passInput"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter password"
                   required
                 />

@@ -29,6 +29,7 @@ export const fetchInfo = () => async (dispatch) => {
           type: GET_ADMIN,
           payload: result.data,
         })
+        
       } else {
         dispatch({
           type: ADMIN_ERROR,
