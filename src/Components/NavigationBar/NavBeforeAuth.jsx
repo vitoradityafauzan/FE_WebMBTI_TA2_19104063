@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const NavBeforeAuth = () => {
   // const dispatch = useDispatch(0);
-  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -14,14 +13,15 @@ const NavBeforeAuth = () => {
           <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">MiKat</span>
         </Navbar.Brand>
-          <div className="flex md:order-2">
-            <Link to="/n0t-r3gul4r/register">
+          <div className="flex md:order-2 w-[8.5rem] justify-between">
+            <Link to="/login">
               <Button>Login</Button>
-              <Navbar.Toggle />
             </Link>
+            <Navbar.Toggle />
           </div>
+          
         <Navbar.Collapse>
-          <Navbar.Link href="/navbars" active={true}>
+          <Navbar.Link href="/" active={true}>
             Home
           </Navbar.Link>
           <Navbar.Link href="/navbars">About</Navbar.Link>

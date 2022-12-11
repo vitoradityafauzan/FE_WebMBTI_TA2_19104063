@@ -99,6 +99,15 @@ export const registerUser = (data) => async (dispatch) => {
   }
 };
 
+export const logout = () => async (dispatch) => {
+  dispatch({
+    type: LOGOUT,
+  })
+  dispatch({
+    type: DELETE_DATA_USER,
+  })
+}
+
 /** Error Handling  */
 const authError = (error) => async (dispatch) => {
   dispatch({

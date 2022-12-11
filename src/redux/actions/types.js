@@ -14,7 +14,6 @@ export const ADMIN_isGOOGLELOGIN = 'ADMIN_isGOOGLELOGIN'
 
 /** User Info States  */
 export const GET_USER = 'GET_USER'
-export const UPDATE_PROFILE = 'UPDATEPROFILE'
 export const JUST_UPDATED = 'JUST_UPDATED'
 export const USERS_ERROR = 'USERS_ERROR'
 export const DELETE_DATA_USER = 'DELETE_DATA_USER'
