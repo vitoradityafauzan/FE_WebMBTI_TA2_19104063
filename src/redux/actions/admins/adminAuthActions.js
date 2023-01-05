@@ -1,4 +1,4 @@
-import { ADMIN_AUTH_ERROR, ADMIN_isGOOGLELOGIN, ADMIN_LOGIN, ADMIN_LOGOUT, ADMIN_isREGISTER, ADMIN_DELETE_DATA_USER } from "../types";
+import { ADMIN_AUTH_ERROR, ADMIN_isGOOGLELOGIN, ADMIN_LOGIN, ADMIN_LOGOUT, ADMIN_isREGISTER, DELETE_SESSION_ADMIN } from "../types";
 
 import Swal from "sweetalert2";
 
@@ -15,7 +15,7 @@ export const loginViaForm = (data) => async (dispatch) => {
   
       const result = await response.json();
 
-      console.log('REACT, login admin, ', result);
+      /* console.log('REACT, login admin, ', result); */
 
       if (result.token) {
         Swal.fire({
@@ -102,6 +102,16 @@ export const registerUser = (data) => async (dispatch) => {
       authError(error);
     }
   };
+
+/** Logout Action  */
+export const logout = () => async (dispatch) => {
+  dispatch({
+    type: ADMIN_LOGOUT,
+  })
+  dispatch({
+    type: DELETE_SESSION_ADMIN,
+  })
+}
 
 /** Error Handling  */
 const authError = (error) => async (dispatch) => {

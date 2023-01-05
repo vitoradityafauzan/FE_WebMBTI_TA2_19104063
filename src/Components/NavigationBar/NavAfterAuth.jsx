@@ -56,12 +56,12 @@ const NavAfterAuth = () => {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/navbars" active={true}>
+          <Navbar.Link href="/" active={true}>
             Halaman Utama
           </Navbar.Link>
           <Navbar.Link href="/navbars">Informasi Semua Kepribadian</Navbar.Link>
-          {/* <Navbar.Link href="/navbars">Services</Navbar.Link>
-          <Navbar.Link href="/navbars">Pricing</Navbar.Link> */}
+          <Navbar.Link href="/tests/mbti">Test MBTI</Navbar.Link>
+          {/* <Navbar.Link href="/navbars">Pricing</Navbar.Link> */}
         </Navbar.Collapse>
       </Navbar>
     </>

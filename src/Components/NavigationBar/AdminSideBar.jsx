@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import { Sidebar } from "flowbite-react";
 import { fetchInfo } from "../../redux/actions/admins/adminInfoActions";
+import { logout } from "../../redux/actions/admins/adminAuthActions";
 import "../../public/css/style.css";
 
 const AdminSideBar = () => {
@@ -15,7 +16,11 @@ const AdminSideBar = () => {
     } else {
       alert('User Data Not Found !')
     }
-  }, [adminIsAuthenticated])
+  }, [adminIsAuthenticated]);
+
+  const handleLogout = async () => {
+    dispatch(logout());
+  }
 
   useEffect(() => {
     if (errorAuthAdmin) {
@@ -137,7 +142,7 @@ const AdminSideBar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="flex items-center p-2 text-base font-normal text-slate-200 rounded-lg hover:bg-sky-800">
+              <a href="#" className="flex items-center p-2 text-base font-normal text-slate-200 rounded-lg bg-red-500 hover:bg-red-800"  onClick={handleLogout}>
                 <svg
                   aria-hidden="true"
                   className="flex-shrink-0 w-6 h-6 text-slate-200 transition duration-75 group-hover:text-gray-900"
@@ -151,7 +156,7 @@ const AdminSideBar = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span className="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Sign Out</span>
               </a>
             </li>
           </ul>

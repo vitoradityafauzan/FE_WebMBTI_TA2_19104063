@@ -1,4 +1,4 @@
-import { GET_USER, JUST_UPDATED, USERS_ERROR, DELETE_DATA_USER, LOGOUT } from "./types";
+import { GET_USER, JUST_UPDATED, USERS_ERROR, DELETE_SESSION_USER, LOGOUT } from "./types";
 
 export const fetchInfo = () => async (dispatch) => {
     try {

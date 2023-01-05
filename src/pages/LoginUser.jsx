@@ -49,7 +49,7 @@ const LoginUser = () => {
                 <h4 className="text-2xl font-bold mb-4 pt-6">Masuk</h4>
                 <form onSubmit={handleSubmit}>
                   <div className="w-full md:w-4/5">
-                    <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    <label for="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                       Email
                     </label>
                     <input
@@ -57,14 +57,14 @@ const LoginUser = () => {
                       id="emailInput"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Masukan Alamat Email"
                       required
                     />
                   </div>
                   <br />
-                  <div class="mb-6 w-full md:w-4/5">
-                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  <div className="mb-6 w-full md:w-4/5">
+                    <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                       Password
                     </label>
                     <input
@@ -72,7 +72,7 @@ const LoginUser = () => {
                       id="passInput"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Masukan password"
                       required
                     />

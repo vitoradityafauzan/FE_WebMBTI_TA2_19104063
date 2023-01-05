@@ -1,4 +1,4 @@
-import { AUTH_ERROR, isGOOGLELOGIN, LOGIN, LOGOUT, isREGISTER, DELETE_DATA_USER } from "./types";
+import { AUTH_ERROR, isGOOGLELOGIN, LOGIN, LOGOUT, isREGISTER, DELETE_SESSION_USER } from "./types";
 
 import Swal from "sweetalert2";
 
@@ -104,7 +104,7 @@ export const logout = () => async (dispatch) => {
     type: LOGOUT,
   })
   dispatch({
-    type: DELETE_DATA_USER,
+    type: DELETE_SESSION_USER,
   })
 }
 

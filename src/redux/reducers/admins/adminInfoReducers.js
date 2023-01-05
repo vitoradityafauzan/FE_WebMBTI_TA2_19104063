@@ -1,5 +1,5 @@
 import {
-    DELETE_DATA_ADMIN,
+    DELETE_SESSION_ADMIN,
     GET_ADMIN,
     JUST_UPDATED_ADMIN,
     ADMIN_ERROR,
@@ -32,7 +32,7 @@ import {
           errorInfoAdmin: action.payload,
           adminJustUpdated: false,
         }
-      case DELETE_DATA_ADMIN:
+      case DELETE_SESSION_ADMIN:
         return {
           ...state,
           adminInfo: null,

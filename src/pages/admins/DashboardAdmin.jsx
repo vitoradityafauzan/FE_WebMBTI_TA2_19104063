@@ -7,7 +7,7 @@ import { fetchInfo } from "../../redux/actions/admins/adminInfoActions";
 import "../../public/css/style.css";
 
 const DashboardAdmin = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(0);
 
   const { isAuthenticated, errorAuth } = useSelector((state) => state.auth);
   const { adminIsAuthenticated, errorAuthAdmin } = useSelector((state) => state.adminAuth);

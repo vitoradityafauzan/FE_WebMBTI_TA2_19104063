@@ -12,6 +12,8 @@ import reportWebVitals from "./reportWebVitals";
 import LoginAdmin from "./pages/admins/LoginAdmin";
 import RegisterAdmin from "./pages/admins/RegisterAdmin";
 import DashboardAdmin from "./pages/admins/DashboardAdmin";
+import MbtiTestUser from "./pages/MbtiTestUser";
+import NotFound from "./pages/NotFound";
 import "./index.css";
 
 // const container = document.getElementById('root');
@@ -26,6 +28,7 @@ root.render(
           <Route exact path="/" element={<Dashboard />} />
           <Route path="/login" element={<LoginUser />} />
           <Route path="/register" element={<RegisterUser />} />
+          <Route path="/tests/mbti" element={<MbtiTestUser />} />
           
           {/* ADMIN ENDPOINTS */}
           <Route path="/n0t-r3gul4r/login" element={<LoginAdmin />} />
@@ -34,6 +37,8 @@ root.render(
 
 
           <Route path="/app" element={<App />} />
+          {/* 404 */}
+        <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </Provider>

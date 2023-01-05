@@ -21,13 +21,11 @@ const NavBeforeAuth = () => {
           </div>
           
         <Navbar.Collapse>
-          <Navbar.Link href="/" active={true}>
-            Home
+        <Navbar.Link href="/" active={true}>
+            Halaman Utama
           </Navbar.Link>
-          <Navbar.Link href="/navbars">About</Navbar.Link>
-          <Navbar.Link href="/navbars">Services</Navbar.Link>
-          <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-          <Navbar.Link href="/navbars">Contact</Navbar.Link>
+          <Navbar.Link href="/navbars">Informasi Semua Kepribadian</Navbar.Link>
+          <Navbar.Link href="/tests/mbti">Test MBTI</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
 
